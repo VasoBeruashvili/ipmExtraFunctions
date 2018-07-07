@@ -1,0 +1,747 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D2BA436F-B0AB-4CB6-9ADF-8A5C37096314}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ipmExtraFunctions</RootNamespace>
+    <AssemblyName>ipmExtraFunctions</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <StartupObject>
+    </StartupObject>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\DLL\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BankStatementForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BankStatementForm.Designer.cs">
+      <DependentUpon>BankStatementForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BonusPercentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BonusPercentForm.Designer.cs">
+      <DependentUpon>BonusPercentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContragentRegHistoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContragentRegHistoryForm.Designer.cs">
+      <DependentUpon>ContragentRegHistoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContragentRelationElementForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContragentRelationElementForm.Designer.cs">
+      <DependentUpon>ContragentRelationElementForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContragentRelationStatisticForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContragentRelationStatisticForm.Designer.cs">
+      <DependentUpon>ContragentRelationStatisticForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseOptimizeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DatabaseOptimizeForm.Designer.cs">
+      <DependentUpon>DatabaseOptimizeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteOperations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteOperations.Designer.cs">
+      <DependentUpon>DeleteOperations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FakturaList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FakturaList.Designer.cs">
+      <DependentUpon>FakturaList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Imports.cs" />
+    <Compile Include="FinaOperationImportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinaOperationImportForm.designer.cs">
+      <DependentUpon>FinaOperationImportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrisImportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrisImportForm.designer.cs">
+      <DependentUpon>OrisImportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ArchiveItemsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ArchiveItemsForm.designer.cs">
+      <DependentUpon>ArchiveItemsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConstructionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConstructionForm.Designer.cs">
+      <DependentUpon>ConstructionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConstructionTemplateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConstructionTemplateForm.Designer.cs">
+      <DependentUpon>ConstructionTemplateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConstructionTemplateFlowForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConstructionTemplateFlowForm.Designer.cs">
+      <DependentUpon>ConstructionTemplateFlowForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConstructionTemplateListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConstructionTemplateListForm.Designer.cs">
+      <DependentUpon>ConstructionTemplateListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CardsOperationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CardsOperationForm.designer.cs">
+      <DependentUpon>CardsOperationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CardImport.cs" />
+    <Compile Include="EmailSendGeneralForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmailSendGeneralForm.Designer.cs">
+      <DependentUpon>EmailSendGeneralForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinaDebtExport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinaDebtExport.Designer.cs">
+      <DependentUpon>FinaDebtExport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Enums.cs" />
+    <Compile Include="ExMultitestPriceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExMultitestPriceForm.Designer.cs">
+      <DependentUpon>ExMultitestPriceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExMultitestSoilMethodForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExMultitestSoilMethodForm.Designer.cs">
+      <DependentUpon>ExMultitestSoilMethodForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RSNsafWaybillsList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RSNsafWaybillsList.Designer.cs">
+      <DependentUpon>RSNsafWaybillsList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StaffSchedulesDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffSchedulesDetailForm.Designer.cs">
+      <DependentUpon>StaffSchedulesDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StaffSchedulesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffSchedulesForm.Designer.cs">
+      <DependentUpon>StaffSchedulesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SyncNecesittyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SyncNecesittyForm.Designer.cs">
+      <DependentUpon>SyncNecesittyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmailSendForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmailSendForm.Designer.cs">
+      <DependentUpon>EmailSendForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExMSColumnsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExMSColumnsForm.Designer.cs">
+      <DependentUpon>ExMSColumnsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExMSProductSearchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExMSProductSearchForm.Designer.cs">
+      <DependentUpon>ExMSProductSearchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExMSTemplatesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExMSTemplatesForm.Designer.cs">
+      <DependentUpon>ExMSTemplatesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExMSTempProductForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExMSTempProductForm.Designer.cs">
+      <DependentUpon>ExMSTempProductForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExMSTypeColumnsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExMSTypeColumnsForm.Designer.cs">
+      <DependentUpon>ExMSTypeColumnsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExMSTypeFieldForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExMSTypeFieldForm.Designer.cs">
+      <DependentUpon>ExMSTypeFieldForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExtraConstructionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExtraConstructionForm.Designer.cs">
+      <DependentUpon>ExtraConstructionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GlobalForm.Designer.cs">
+      <DependentUpon>GlobalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalOperationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GlobalOperationForm.designer.cs">
+      <DependentUpon>GlobalOperationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IciParisImport.cs" />
+    <Compile Include="Recipient.cs" />
+    <Compile Include="SendSMSForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SendSMSForm.Designer.cs">
+      <DependentUpon>SendSMSForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SMSSettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SMSSettingsForm.Designer.cs">
+      <DependentUpon>SMSSettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TableAsyncSettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TableAsyncSettingsForm.Designer.cs">
+      <DependentUpon>TableAsyncSettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UniPayForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UniPayForm.Designer.cs">
+      <DependentUpon>UniPayForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchForm.Designer.cs">
+      <DependentUpon>SearchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProfitabilityDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProfitabilityDetailForm.Designer.cs">
+      <DependentUpon>ProfitabilityDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProfitabilitySubForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProfitabilitySubForm.Designer.cs">
+      <DependentUpon>ProfitabilitySubForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExtractVatForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExtractVatForm.Designer.cs">
+      <DependentUpon>ExtractVatForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BankStatementForm.resx">
+      <DependentUpon>BankStatementForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BonusPercentForm.resx">
+      <DependentUpon>BonusPercentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContragentRegHistoryForm.resx">
+      <DependentUpon>ContragentRegHistoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContragentRelationElementForm.resx">
+      <DependentUpon>ContragentRelationElementForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContragentRelationStatisticForm.resx">
+      <DependentUpon>ContragentRelationStatisticForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DatabaseOptimizeForm.resx">
+      <DependentUpon>DatabaseOptimizeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteOperations.resx">
+      <DependentUpon>DeleteOperations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FakturaList.resx">
+      <DependentUpon>FakturaList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinaOperationImportForm.resx">
+      <DependentUpon>FinaOperationImportForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrisImportForm.resx">
+      <DependentUpon>OrisImportForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ArchiveItemsForm.resx">
+      <DependentUpon>ArchiveItemsForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConstructionForm.resx">
+      <DependentUpon>ConstructionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConstructionTemplateForm.resx">
+      <DependentUpon>ConstructionTemplateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConstructionTemplateFlowForm.resx">
+      <DependentUpon>ConstructionTemplateFlowForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConstructionTemplateListForm.resx">
+      <DependentUpon>ConstructionTemplateListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardsOperationForm.resx">
+      <DependentUpon>CardsOperationForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmailSendGeneralForm.resx">
+      <DependentUpon>EmailSendGeneralForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinaDebtExport.resx">
+      <DependentUpon>FinaDebtExport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExMultitestPriceForm.resx">
+      <DependentUpon>ExMultitestPriceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExMultitestSoilMethodForm.resx">
+      <DependentUpon>ExMultitestSoilMethodForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RSNsafWaybillsList.resx">
+      <DependentUpon>RSNsafWaybillsList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffSchedulesDetailForm.resx">
+      <DependentUpon>StaffSchedulesDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffSchedulesForm.resx">
+      <DependentUpon>StaffSchedulesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SyncNecesittyForm.resx">
+      <DependentUpon>SyncNecesittyForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmailSendForm.resx">
+      <DependentUpon>EmailSendForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExMSColumnsForm.resx">
+      <DependentUpon>ExMSColumnsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExMSProductSearchForm.resx">
+      <DependentUpon>ExMSProductSearchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExMSTemplatesForm.resx">
+      <DependentUpon>ExMSTemplatesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExMSTempProductForm.resx">
+      <DependentUpon>ExMSTempProductForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExMSTypeColumnsForm.resx">
+      <DependentUpon>ExMSTypeColumnsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExMSTypeFieldForm.resx">
+      <DependentUpon>ExMSTypeFieldForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExtraConstructionForm.resx">
+      <DependentUpon>ExtraConstructionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GlobalForm.resx">
+      <DependentUpon>GlobalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GlobalOperationForm.resx">
+      <DependentUpon>GlobalOperationForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SendSMSForm.resx">
+      <DependentUpon>SendSMSForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SMSSettingsForm.resx">
+      <DependentUpon>SMSSettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TableAsyncSettingsForm.resx">
+      <DependentUpon>TableAsyncSettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UniPayForm.resx">
+      <DependentUpon>UniPayForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchForm.resx">
+      <DependentUpon>SearchForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfitabilityDetailForm.resx">
+      <DependentUpon>ProfitabilityDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfitabilitySubForm.resx">
+      <DependentUpon>ProfitabilitySubForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExtractVatForm.resx">
+      <DependentUpon>ExtractVatForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProvidersForm.resx">
+      <DependentUpon>ProvidersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProvidersMoveForm.resx">
+      <DependentUpon>ProvidersMoveForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfitabilityMainForm.resx">
+      <DependentUpon>ProfitabilityMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ProvidersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProvidersForm.Designer.cs">
+      <DependentUpon>ProvidersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProvidersMoveForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProvidersMoveForm.Designer.cs">
+      <DependentUpon>ProvidersMoveForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProfitabilityMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProfitabilityMainForm.Designer.cs">
+      <DependentUpon>ProfitabilityMainForm.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\iPoint Modules\ipmControls\ipmControls.csproj">
+      <Project>{5737E269-EF30-41C2-9D0A-0C4FEC11CCA6}</Project>
+      <Name>ipmControls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\iPoint Modules\ipmDocs\ipmDocSubForms\ipmDocSubForms.csproj">
+      <Project>{00CDD213-14BC-443F-9007-27D3EDE004C2}</Project>
+      <Name>ipmDocSubForms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\iPoint Modules\ipmDocs\ipmProductOutForm\ipmProductOutForm.csproj">
+      <Project>{062DEF5D-434A-4754-8711-351BAA8C1ECC}</Project>
+      <Name>ipmProductOutForm</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\iPoint Modules\ipmDocs\ipmVendorOrderForm\ipmVendorOrderForm.csproj">
+      <Project>{88990B1B-24B1-4CB9-9435-9C4C424C34F6}</Project>
+      <Name>ipmVendorOrderForm</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\iPoint Modules\ipmElementForms\ipmElementForms.csproj">
+      <Project>{234cec0f-de58-4089-86ad-9ae538ad7440}</Project>
+      <Name>ipmElementForms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\iPoint Modules\ipmElementList\ipmElementList.csproj">
+      <Project>{DDE3124B-E2BE-4D6F-AF39-1293FE4081D9}</Project>
+      <Name>ipmElementList</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\iPoint Modules\ipmPMBasic\ipmPMBasic.csproj">
+      <Project>{CED5270D-42AB-46DF-9344-72F02FB9284E}</Project>
+      <Name>ipmPMBasic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ipmBaseListGridView\ipmBaseListGridView.csproj">
+      <Project>{7B60584A-4037-409E-90CA-C546A4380CC5}</Project>
+      <Name>ipmBaseListGridView</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ipmBLogic\ipmBLogic.csproj">
+      <Project>{3B5DBFD3-1885-42CB-BA78-50A99AF344E2}</Project>
+      <Name>ipmBLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ipmReportGenerator\ipmReportGenerator.csproj">
+      <Project>{3F2833FB-CA69-4CBF-973C-B4D3C3309257}</Project>
+      <Name>ipmReportGenerator</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Excel-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\note_pinned_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FINA.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder_closed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\select_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_and_new_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flash_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vendor_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit_161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\earth2_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mail_send_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder_edit_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mail_out.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\attachment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nav_down_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nav_up_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contacts_add_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contacts_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_user_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_user_blue_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_contact_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_delete_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_edit_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\moneybag_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\earth2_161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\undo_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document_dirty_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\package_new_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\down button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete2_321_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check2_321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\recycle_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\forbidden.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bullet_ball_glass_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bullet_ball_glass_red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document_notebook_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document_pinned_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customers_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zoom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\syncronization_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add2.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
